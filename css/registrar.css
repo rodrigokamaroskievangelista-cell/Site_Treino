@@ -21,7 +21,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("../img/fundo.jpeg") no-repeat;
+  background: url("../img/tela_login.png") no-repeat;
   background-size: cover;
   background-position: center;
 }
@@ -59,7 +59,7 @@ body{
   background: transparent;
   border: none;
   outline: none;
-  border: 2px solid rgba(255, 255, 255, .2);
+  border: 2px solid rgba(255, 255, 255, 0.2);
   border-radius: 40px;
   font-size: 16px;
   color: #fff;
