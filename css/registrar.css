@@ -21,7 +21,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background: url("../img/tela_login.png") no-repeat;
+  background: url("../img/fundo.jpg") no-repeat;
   background-size: cover;
   background-position: center;
 }
