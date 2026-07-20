@@ -17,8 +17,8 @@ def get_db_connection():
 # PÁGINA PRINCIPAL
 # ==========================================
 @app.route("/")
-def principal():
-    return render_template("home/principal.html")
+def interface():
+    return render_template("home/interfase.html")
 
 
 # ==========================================
@@ -80,7 +80,7 @@ def cadastro():
 
         return redirect(url_for("login"))
 
-    return render_template("cadastro.html")
+    return render_template("registrar.html")
 
 
 # ==========================================
