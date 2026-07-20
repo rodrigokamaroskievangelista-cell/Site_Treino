@@ -6,9 +6,9 @@
   <title>Login</title>
 
   <!-- Arquivo CSS -->
-  <link rel="stylesheet" href="../../css/login.css">
+  <link rel="stylesheet" href="'{{ url_for('static', filename='login.css') }}'">
 
-  <!-- Biblioteca de ícones -->
+  <!-- Biblioteca de ícones -->''
   <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 
@@ -30,13 +30,11 @@
       </div>
 
       <div class="input-box">
-        <!-- Adicionado apenas o atributo name -->
-        <input type="text" name="nome" placeholder="Username" required>
+        <input type="email" name="email" placeholder="Email" required>
         <i class="bx bxs-user"></i>
       </div>
 
       <div class="input-box">
-        <!-- Adicionado apenas o atributo name -->
         <input type="password" name="senha" placeholder="Password" required>
         <i class="bx bxs-lock-alt"></i>
       </div>

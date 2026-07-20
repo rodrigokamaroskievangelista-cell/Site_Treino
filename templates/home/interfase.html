@@ -5,41 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface</title>
 
-    <link rel="stylesheet" href="../../css/interfase.css">
-    <link rel="stylesheet" href="../../css/principal.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/interfase.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/principal.css') }}">
 
+    <!-- Ícones -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="butoes">
-            <a href="../login_registro/login.html">
+
+            <!-- Vai para a rota de login -->
+            <a href="{{ url_for('login') }}">
                 <button class="button">Login</button>
             </a>
 
-            <a href="../login_registro/registrar.html">
+            <!-- Vai para a rota de cadastro -->
+            <a href="{{ url_for('cadastro') }}">
                 <button class="button">Registrar</button>
             </a>
+
         </div>
     </nav>
 
     <main class="container">
         <section class="welcome">
             <h1>Bem-vindo ao nosso site!</h1>
+
             <p>
                 Explore nossos recursos e aproveite a experiência.
             </p>
         </section>
 
         <section class="perfil-section">
+
             <div class="cartao-perfil">
+
                 <i class='bx bx-user'></i>
+
                 <h2>Entrar</h2>
+
                 <p>
                     Entrar no site para acessar todos os recursos disponíveis.
                 </p>
-                <a href="principal.html">
+
+                <!-- Abre a tela de login -->
+                <a href="{{ url_for('login') }}">
                     <button class="button">Acessar</button>
                 </a>
 
