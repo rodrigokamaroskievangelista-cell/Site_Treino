@@ -14,29 +14,46 @@
 
 <body>
   <div class="botaoLogin">
-    <form action="">
+
+    <!-- Envia os dados para a rota /login -->
+    <form action="{{ url_for('login') }}" method="POST">
+
       <h1>Login</h1>
 
+      <!-- Mensagem de erro ou sucesso -->
+      <div class="message">
+        {% with messages = get_flashed_messages() %}
+          {% if messages %}
+            {{ messages[0] }}
+          {% endif %}
+        {% endwith %}
+      </div>
+
       <div class="input-box">
-        <input type="text" placeholder="Username" required>
+        <!-- Adicionado apenas o atributo name -->
+        <input type="text" name="nome" placeholder="Username" required>
         <i class="bx bxs-user"></i>
       </div>
 
       <div class="input-box">
-        <input type="password" placeholder="Password" required>
+        <!-- Adicionado apenas o atributo name -->
+        <input type="password" name="senha" placeholder="Password" required>
         <i class="bx bxs-lock-alt"></i>
       </div>
 
       <div class="remember-forgot">
-        <label><input type="checkbox"> Lembrar de mim</label>
+        <label><input type="checkbox" name="lembrar"> Lembrar de mim</label>
         <a href="#">Forgot Password</a>
       </div>
 
       <button type="submit" class="btn">Login</button>
 
       <div class="register-link">
-        <p>Não tem uma conta? <a href="registrar.html">Registre-se</a></p>
+        <p>Não tem uma conta?
+          <a href="{{ url_for('cadastro') }}">Registre-se</a>
+        </p>
       </div>
+
     </form>
   </div>
 </body>
