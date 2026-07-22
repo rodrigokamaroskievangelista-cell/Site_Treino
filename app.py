@@ -14,11 +14,36 @@ def get_db_connection():
 
 
 # ==========================================
+# CRIA A TABELA SE ELA NÃO EXISTIR
+# ==========================================
+def criar_tabela():
+    conn = get_db_connection()
+    cursor = conn.cursor()
+
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS usuarios (
+            id INTEGER PRIMARY KEY AUTOINCREMENT,
+            nome TEXT NOT NULL,
+            email TEXT NOT NULL UNIQUE,
+            senha TEXT NOT NULL
+        )
+    """)
+
+    conn.commit()
+    conn.close()
+
+
+# ==========================================
 # PÁGINA PRINCIPAL
 # ==========================================
 @app.route("/")
 def interface():
     return render_template("home/interfase.html")
+
+@app.route("/principal")
+def principal():
+    return render_template("./home/principal.html")
+
 
 
 # ==========================================
@@ -46,6 +71,7 @@ def login():
 
         if usuario:
             return redirect(url_for("principal"))
+            
 
         flash("E-mail ou senha incorretos.")
         return redirect(url_for("login"))
@@ -68,15 +94,20 @@ def cadastro():
         conn = get_db_connection()
         cursor = conn.cursor()
 
-        cursor.execute("""
-            INSERT INTO usuarios(nome, email, senha)
-            VALUES (?, ?, ?)
-        """, (nome, email, senha))
+        try:
+            cursor.execute("""
+                INSERT INTO usuarios(nome, email, senha)
+                VALUES (?, ?, ?)
+            """, (nome, email, senha))
 
-        conn.commit()
-        conn.close()
+            conn.commit()./principal.html
+            flash("Cadastro realizado com sucesso!")
 
-        flash("Cadastro realizado com sucesso!")
+        except sqlite3.IntegrityError:
+            flash("Esse e-mail já está cadastrado.")
+
+        finally:
+            conn.close()
 
         return redirect(url_for("login"))
 
@@ -87,4 +118,5 @@ def cadastro():
 # EXECUTA O SERVIDOR
 # ==========================================
 if __name__ == "__main__":
+    criar_tabela()
     app.run(debug=True)
