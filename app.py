@@ -100,7 +100,7 @@ def cadastro():
                 VALUES (?, ?, ?)
             """, (nome, email, senha))
 
-            conn.commit()./principal.html
+            conn.commit()
             flash("Cadastro realizado com sucesso!")
 
         except sqlite3.IntegrityError:
