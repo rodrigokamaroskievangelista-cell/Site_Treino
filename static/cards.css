@@ -1,120 +1,50 @@
-/* ========================================= */
-/*                CARDS                       */
-/* ========================================= */
-
 .cards{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-    padding: 30px;
+    gap: 20px;
+    justify-content: flex-start;
 }
 
-
-/* ========================================= */
-/*               CARD                         */
-/* ========================================= */
-
 .card{
-    width: 300px;
-    height: 500px;
-
-    display: flex;
-    flex-direction: column;
-
-    background: #ffffff;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0,0,0,.2);
+    width: 250px;
+    background: #1f1f1f;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,.4);
     transition: .3s;
 }
 
-
-/* ========================================= */
-/*           EFEITO AO PASSAR O MOUSE         */
-/* ========================================= */
-
 .card:hover{
-    transform: translateY(-8px);
+    transform: translateY(-5px);
 }
-
-
-/* ========================================= */
-/*             IMAGEM DO CARD                 */
-/* ========================================= */
 
 .card img{
     width: 100%;
-    height: 250px;
+    height: 180px;
     object-fit: cover;
+    border-radius: 8px;
 }
-
-
-/* ========================================= */
-/*             TÍTULO                         */
-/* ========================================= */
 
 .card h2{
-    font-size: 24px;
     margin: 15px 0 10px;
-    text-align: center;
 }
-
-
-/* ========================================= */
-/*            DESCRIÇÃO                       */
-/* ========================================= */
 
 .card p{
-    color: #555;
-    font-size: 15px;
-    text-align: center;
-    padding: 0 15px;
+    color: #ccc;
+    margin-bottom: 15px;
 }
-
-
-/* ========================================= */
-/*               PREÇO                        */
-/* ========================================= */
-
-.preco{
-    display: block;
-    font-size: 22px;
-    font-weight: bold;
-    color: #2ecc71;
-    text-align: center;
-    margin-top: 15px;
-}
-
-
-/* ========================================= */
-/*               BOTÃO                        */
-/* ========================================= */
 
 .card button{
-    width: calc(100% - 30px);
-
-    margin: auto 15px 15px 15px;
-
-    padding: 12px;
-
-    border: none;
-    border-radius: 8px;
-
-    background: #2d89ef;
+    background: #7109b6;
     color: #fff;
-
+    border: none;
+    padding: 10px 20px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: 16px;
-
     transition: .3s;
 }
 
-
-/* ========================================= */
-/*         BOTÃO - HOVER                      */
-/* ========================================= */
-
 .card button:hover{
-    background: #1d6fd8;
+    background: #8f1de0;
 }
