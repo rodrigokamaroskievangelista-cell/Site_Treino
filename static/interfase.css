@@ -6,7 +6,7 @@
 }
 
 body{
-    background-image:url("img/fundo.jpg");
+    background-image:url("img/pixel_art.png");
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -90,12 +90,12 @@ body{
     flex:1;
     display:flex;
     justify-content:center;
-    align-items:center;
+    align-items:center;pixel_rpg_background_2
 }
 
 .cartao-perfil{
     width:320px;
-    background:#1a1a1a;
+    background: #1a1a1a;;
     padding:35px;
     border-radius:15px;
     text-align:center;

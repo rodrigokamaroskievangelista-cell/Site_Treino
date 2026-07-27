@@ -3,15 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../static/cards.css">
-    <link rel="stylesheet" href="../../static/menu.css">
-    <title>Menu Lateral</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='cards.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
+
+    <title>Produtos</title>
 </head>
 <body>
 
     <aside class="sidebar">
         <ul>
-            <li><a href="/projeto/">Home</a></li>
+            <li><a href="{{ url_for('interface') }}">Home</a></li>
             <li><a href="#">Perfil</a></li>
 
             <li>
@@ -32,28 +34,28 @@
         <section class="cards">
 
             <div class="card">
-                <img src="../img/img_produto/cat.jpeg" alt="Gato">
+                <img src="{{ url_for('static', filename='img/img_produto/cat.jpeg') }}" alt="Gato">
                 <h2>Card 1</h2>
                 <p>Descrição do primeiro produto.</p>
                 <button>Ver mais</button>
             </div>
 
             <div class="card">
-                <img src="../img/img_produto/dog.jpeg" alt="Cachorro">
+                <img src="{{ url_for('static', filename='img/img_produto/cat.jpeg') }}" alt="Gato">
                 <h2>Card 2</h2>
                 <p>Descrição do segundo produto.</p>
                 <button>Ver mais</button>
             </div>
 
             <div class="card">
-                <img src="../img/img_produto/cat.jpeg" alt="Produto">
+                <img src="{{ url_for('static', filename='img/img_produto/cat.jpeg') }}" alt="Produto">
                 <h2>Card 3</h2>
                 <p>Descrição do terceiro produto.</p>
                 <button>Ver mais</button>
             </div>
 
             <div class="card">
-                <img src="../img/img_produto/cat.jpeg" alt="Produto">
+                <img src="{{ url_for('static', filename='img/img_produto/cat.jpeg') }}" alt="Produto">
                 <h2>Card 4</h2>
                 <p>Descrição do quarto produto.</p>
                 <button>Ver mais</button>

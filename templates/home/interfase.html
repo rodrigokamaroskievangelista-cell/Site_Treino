@@ -1,40 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface</title>
 
-    <!-- CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='interfase.css') }}">
-
-    <!-- Ícones -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
-        <div class="butoes">
-
-            <!-- Vai para a rota de login -->
-            <a href="{{ url_for('login') }}">
-                <button class="button">Login</button>
-            </a>
-
-            <!-- Vai para a rota de cadastro -->
-            <a href="{{ url_for('cadastro') }}">
-                <button class="button">Registrar</button>
-            </a>
-
+        <div class="botoes">
+            <a href="{{ url_for('login') }}" class="button">Login</a>
+            <a href="{{ url_for('cadastro') }}" class="button">Registrar</a>
         </div>
     </nav>
 
     <main class="container">
+
         <section class="welcome">
-            <h1>Bem-vindo ao nosso site!</h1>
+            <h1>Bem-vindo ao Reino das Histórias</h1>
 
             <p>
-                Explore nossos recursos e aproveite a experiência.
+               Você está preparado para descobrir histórias que atravessam o tempo?
             </p>
         </section>
 
@@ -47,12 +36,11 @@
                 <h2>Entrar</h2>
 
                 <p>
-                    Entrar no site para acessar todos os recursos disponíveis.
+                    Entre no site para acessar todos os recursos disponíveis.
                 </p>
 
-                <!-- Abre a tela de login -->
-                <a href="{{ url_for('login') }}">
-                    <button class="button">Acessar</button>
+                <a href="{{ url_for('login') }}" class="button">
+                    Acessar
                 </a>
 
             </div>
