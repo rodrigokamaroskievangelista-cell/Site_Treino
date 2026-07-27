@@ -9,7 +9,7 @@
 body{
     display: flex;
     min-height: 100vh;
-    background: #000;
+    background-url: #fffefe;
     color: #fff;
 }
 
