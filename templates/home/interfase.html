@@ -11,9 +11,17 @@
 <body>
 
     <nav class="navbar">
-        <div class="botoes">
-            <a href="{{ url_for('login') }}" class="button">Login</a>
-            <a href="{{ url_for('cadastro') }}" class="button">Registrar</a>
+        <div class="butoes">
+        </div>
+    </nav>
+    <nav class ="menu-center">
+        <a href="#" class="active">Home</a>
+        <a href="#">About</a>
+        <a href="#">Service</a>
+        <a href="#">Contact</a>
+
+        <div class ="menu-line">
+            <span class ="menu-light"></span>
         </div>
     </nav>
 
@@ -48,6 +56,8 @@
         </section>
 
     </main>
+
+    <script src="{{ url_for('static', filename='interfase.js') }}"></script>
 
 </body>
 </html>

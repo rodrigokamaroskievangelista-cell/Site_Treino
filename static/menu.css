@@ -9,7 +9,7 @@
 body{
     display: flex;
     min-height: 100vh;
-    background-url: #fffefe;
+    background: url("../static/img/fundo_pagina.png") no-repeat;
     color: #fff;
 }
 

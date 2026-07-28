@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+English+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
 *{
     margin:0;
     padding:0;
@@ -14,29 +18,7 @@ body{
     min-height:100vh;
 }
 
-/* ================= NAVBAR ================= */
-
-.navbar{
-    width:100%;
-    height:70px;
-
-    display:flex;
-    justify-content:flex-end;
-    align-items:center;
-
-    padding:0 40px;
-
-    position:fixed;
-    top:0;
-    left:0;
-    z-index:1000;
-}
-
-.butoes{
-    display:flex;
-    align-items:center;
-    gap:15px;
-}
+/* ================= BOTÕES ================= */
 
 .button{
     background:#1f1f1f;
@@ -45,11 +27,13 @@ body{
     padding:10px 20px;
     border-radius:8px;
     cursor:pointer;
-    transition:0.3s;
+    transition:.3s;
+    font-family: Cambria, Cochin, Georgia, 'Times New Roman', Times, serif;
+    text-decoration: none;
 }
 
 .button:hover{
-    background:#8a2be2;
+    background:#e27d2b;
 }
 
 /* ================= CONTEÚDO ================= */
@@ -73,15 +57,18 @@ body{
 }
 
 .welcome h1{
-    font-size:52px;
-    line-height:1.2;
-    margin-bottom:20px;
+    font-family: 'Cinzel', serif;
+    color:#ffc402; /* Ouro antigo */
+    text-shadow:
+        0 0 6px #e4e70ba4,
+        2px 2px 4px rgba(0,0,0,.8);
 }
 
 .welcome p{
-    font-size:20px;
-    color:#d4d4d4;
-    line-height:1.7;
+    font-family: 'IM Fell English SC', serif;
+    color:#ffc402; /* Cor de pergaminho */
+    font-size:22px;
+    line-height:1.8;
 }
 
 /* ================= CARD ================= */
@@ -90,17 +77,17 @@ body{
     flex:1;
     display:flex;
     justify-content:center;
-    align-items:center;pixel_rpg_background_2
+    align-items:center;
 }
 
 .cartao-perfil{
     width:320px;
-    background: #1a1a1a;;
+    background:#1a1a1a;
     padding:35px;
     border-radius:15px;
     text-align:center;
-    box-shadow:0 0 20px rgba(182,7,89,.25);
-    transition:0.3s;
+   box-shadow: 0 0 20px rgba(226, 125, 43, 0.35);
+    transition:.3s;
 }
 
 .cartao-perfil:hover{
@@ -109,7 +96,7 @@ body{
 
 .cartao-perfil i{
     font-size:90px;
-    color:#8a2be2;
+    color:#e27d2b;
     margin-bottom:20px;
 }
 
@@ -120,4 +107,86 @@ body{
 .cartao-perfil p{
     color:#bfbfbf;
     margin-bottom:25px;
+}
+
+/* ================= MENU CENTRAL ================= */
+
+.menu-center{
+    position:fixed;
+    top:28px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:85px;
+    z-index:2000;
+}
+
+.menu-center a{
+    font-family: 'Cinzel', serif;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.menu-center a.active,
+.menu-center a:hover{
+    color:#df4e0b;
+}
+.menu-line{
+    position:absolute;
+    top:42px;
+    left:50%;
+    transform:translateX(-50%);
+
+    width:560px;
+    height:3px;
+
+    border-radius:50px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #C96A00 20%,   /* Cobre */
+        #FF8C00 50%,   /* Laranja escuro */
+        #FFB347 80%,   /* Âmbar */
+        transparent
+    );
+
+    box-shadow:
+        0 0 8px #C96A00,
+        0 0 18px #FF8C00,
+        0 0 35px #FFB347;
+
+    overflow:hidden;
+}
+
+.menu-light{
+    position:absolute;
+    top:50%;
+    left:-140px;
+    transform:translateY(-50%);
+    width:140px;
+    height:10px;
+    border-radius:50%;
+    background:#FFD700;
+    filter:blur(2px);
+    box-shadow:
+        0 0 10px #FFD700,
+        0 0 25px #FFC107,
+        0 0 45px #FFEA70,
+        0 0 70px rgba(255, 234, 112, .9);
+    animation:neonMove 3s linear infinite;
+}
+
+@keyframes neonMove{
+    from{
+        left:-140px;
+    }
+    to{
+        left:560px;
+    }
 }
