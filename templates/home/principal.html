@@ -3,66 +3,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom Tales</title>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='cards.css') }}">
-    <link rel="stylesheet" href="{{ url_for('static', filename='menu.css') }}">
-
-    <title>Produtos</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='pagina.css') }}">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
+
 <body>
 
-    <aside class="sidebar">
+    <!-- MENU -->
+    <nav class="menu-center">
+
+        <a href="{{ url_for('interfase') }}" class="active">Home</a>
+
+        <a href="#">Biblioteca</a>
+
+        <div class="dropdown">
+
+            <a href="#">Categorias</a>
+
+            <div class="contos">
+                <a href="#">⚔️ Medieval</a>
+                <a href="#">🐉 Fantasia</a>
+                <a href="#">👻 Terror</a>
+                <a href="#">🏹 Aventura</a>
+            </div>
+
+        </div>
+
+        <a href="#">Sobre</a>
+
+        <a href="#">Perfil</a>
+
+
+        <div class="menu-line">
+            <span class="menu-light"></span>
+        </div>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section class="hero">
+
+        <h1>Bem-vindo ao Reino das Histórias</h1>
+
+        <p>
+            Descubra aventuras, reinos esquecidos e lendas
+            que aguardam por novos exploradores.
+        </p>
+
+        <a href="#" class="button">
+            Explorar Histórias
+        </a>
+
+    </section>
+
+
+    <!-- DESTAQUES -->
+    <section class="destaques">
+
+        <h2>⭐ Histórias em Destaque</h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <img src="{{ url_for('static', filename='img/capa1.jpg') }}" alt="">
+
+                <h3>Reino Perdido</h3>
+
+                <p>Fantasia Medieval</p>
+
+                <a href="#" class="button">Ler Agora</a>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="{{ url_for('static', filename='img/capa2.jpg') }}" alt="">
+
+                <h3>O Último Dragão</h3>
+
+                <p>Aventura</p>
+
+                <a href="#" class="button">Ler Agora</a>
+
+            </div>
+
+
+            <div class="card">
+
+                <img src="{{ url_for('static', filename='img/capa3.jpg') }}" alt="">
+
+                <h3>As Ruínas Sombrias</h3>
+
+                <p>Terror</p>
+
+                <a href="#" class="button">Ler Agora</a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATEGORIAS -->
+
+    <section class="categorias">
+
+        <h2>📚 Categorias</h2>
+
+        <div class="lista-categorias">
+
+            <div>⚔️ Medieval</div>
+            <div>🐉 Fantasia</div>
+            <div>👑 Reinos</div>
+            <div>🧙 Magia</div>
+            <div>🏹 Aventura</div>
+            <div>👻 Terror</div>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIS LIDAS -->
+
+    <section class="mais-lidas">
+
+        <h2>🔥 Mais Lidas</h2>
+
         <ul>
-            <li><a href="{{ url_for('interface') }}">Home</a></li>
-            <li><a href="#">Perfil</a></li>
 
-            <li>
-                <a href="#">Produtos</a>
-                <ul class="submenu">
-                    <li><a href="#">Entretenimento</a></li>
-                    <li><a href="#">Eletrônicos</a></li>
-                    <li><a href="#">Móveis</a></li>
-                </ul>
-            </li>
+            <li>⚔️ A Guerra dos Reinos</li>
+            <li>🐉 O Último Dragão</li>
+            <li>👑 O Trono Esquecido</li>
+            <li>🧙 A Floresta Proibida</li>
 
-            <li><a href="#">Contato</a></li>
-            <li><a href="#">Redes Sociais</a></li>
         </ul>
-    </aside>
 
-    <main class="content">
-        <section class="cards">
+    </section>
 
-            <div class="card">
-                <img src="{{ url_for('static', filename='img/img_produto/cat.jpeg') }}" alt="Gato">
-                <h2>Card 1</h2>
-                <p>Descrição do primeiro produto.</p>
-                <button>Ver mais</button>
-            </div>
 
-            <div class="card">
-                <img src="{{ url_for('static', filename='img/img_produto/cat.jpeg') }}" alt="Gato">
-                <h2>Card 2</h2>
-                <p>Descrição do segundo produto.</p>
-                <button>Ver mais</button>
-            </div>
+    <!-- SOBRE -->
 
-            <div class="card">
-                <img src="{{ url_for('static', filename='img/img_produto/cat.jpeg') }}" alt="Produto">
-                <h2>Card 3</h2>
-                <p>Descrição do terceiro produto.</p>
-                <button>Ver mais</button>
-            </div>
+    <section class="sobre">
 
-            <div class="card">
-                <img src="{{ url_for('static', filename='img/img_produto/cat.jpeg') }}" alt="Produto">
-                <h2>Card 4</h2>
-                <p>Descrição do quarto produto.</p>
-                <button>Ver mais</button>
-            </div>
+        <h2>📜 Sobre</h2>
 
-        </section>
-    </main>
+        <p>
+            Kingdom Tales é um portal dedicado a histórias medievais,
+            aventuras épicas e mundos fantásticos criados por diversos autores.
+        </p>
+
+    </section>
+
+
+    <!-- RODAPÉ -->
+
+    <footer>
+
+        <p>
+            © 2026 Kingdom Tales • Todos os direitos reservados.
+        </p>
+
+    </footer>
+
 
 </body>
 </html>

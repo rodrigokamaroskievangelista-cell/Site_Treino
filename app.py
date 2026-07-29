@@ -34,17 +34,19 @@ def criar_tabela():
 
 
 # ==========================================
-# PÁGINA PRINCIPAL
+# PÁGINA INICIAL
 # ==========================================
 @app.route("/")
-def interface():
+def interfase():
     return render_template("home/interfase.html")
 
+
+# ==========================================
+# PÁGINA PRINCIPAL
+# ==========================================
 @app.route("/principal")
 def principal():
-    return render_template("./home/principal.html")
-
-
+    return render_template("home/principal.html")
 
 # ==========================================
 # LOGIN

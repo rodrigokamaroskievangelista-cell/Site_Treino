@@ -31,7 +31,7 @@ body{
 .botaoLogin{
   width: 420px;
   background: rgba(26, 26, 26, 0.85);
-  border: 2px solid #8a2be2;
+  border: 2px solid  #dd901b;
   backdrop-filter: blur(11px);
   color: #fff;
   border-radius: 15px;
@@ -63,12 +63,12 @@ body{
   border: 2px solid rgba(255, 255, 255, .2);
   border-radius: 40px;
   font-size: 16px;
-  color: #fff;
+  color: transparent;
   padding: 20px 45px 20px 20px;
 }
 
 .input-box input:focus{
-  border-color: #8a2be2;
+  border-color:  #dd901b;
 }
 
 /* Placeholder */
@@ -95,7 +95,7 @@ body{
 
 /* Checkbox */
 .remember-forgot label input{
-  accent-color: #8a2be2;
+  accent-color:  #dd901b;
   margin-right: 3px;
 }
 
@@ -107,7 +107,7 @@ body{
 
 .remember-forgot a:hover{
   text-decoration: underline;
-  color: #8a2be2;
+  color: #dd901b;
 }
 
 /* Botão - mesmo estilo do .button da interfase */
@@ -127,7 +127,7 @@ body{
 }
 
 .botaoLogin .btn:hover{
-  background: #8a2be2;
+  background:  #dd901b;
 }
 
 /* Cadastro */
@@ -139,7 +139,7 @@ body{
 
 /* Link cadastro */
 .register-link p a{
-  color: #8a2be2;
+  color:  #dd901b;
   text-decoration: none;
   font-weight: 600;
 }

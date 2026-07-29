@@ -1,0 +1,194 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-image:url("img/fundo_pagina.png");
+    background-size:cover;
+    background-position:center;
+    color:#fff;
+    min-height:100vh;
+}
+
+
+/* ================= HERO ================= */
+
+.hero{
+    text-align:center;
+    padding:160px 20px 80px;
+}
+
+.hero h1{
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:700px;
+    margin:0 auto 30px;
+}
+
+
+/* ================= BOTÃO ================= */
+
+.button{
+    display:inline-block;
+    padding:12px 25px;
+    background:#333;
+    color:#fff;
+    text-decoration:none;
+    border-radius:6px;
+}
+
+
+/* ================= CATEGORIAS ================= */
+
+.categorias{
+    width:90%;
+    margin:50px auto;
+    text-align:center;
+}
+
+.lista-categorias{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:20px;
+}
+
+.lista-categorias div{
+    padding:12px 20px;
+    background:#222;
+    border-radius:8px;
+}
+
+
+/* ================= DESTAQUES ================= */
+
+.destaques{
+    width:90%;
+    margin:80px auto;
+}
+
+.cards{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    flex-wrap:wrap;
+    margin-top:30px;
+}
+
+.card{
+    width:250px;
+    background:#222;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+}
+
+.card img{
+    width:100%;
+    height:320px;
+    object-fit:cover;
+    border-radius:8px;
+}
+
+
+/* ================= MAIS LIDAS ================= */
+
+.mais-lidas{
+    width:90%;
+    margin:80px auto;
+}
+
+.mais-lidas ul{
+    margin-top:20px;
+    padding-left:20px;
+}
+
+
+/* ================= SOBRE ================= */
+
+.sobre{
+    width:90%;
+    max-width:900px;
+    margin:80px auto;
+    text-align:center;
+}
+
+
+/* ================= RODAPÉ ================= */
+
+footer{
+    text-align:center;
+    padding:30px;
+    margin-top:80px;
+}
+
+
+/* ================= MENU CENTRAL ================= */
+
+.menu-center{
+    position:fixed;
+    top:28px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:85px;
+    z-index:2000;
+}
+
+.menu-center a{
+    font-family:'Cinzel', serif;
+    color:#fff;
+    text-decoration:none;
+    font-size:18px;
+    font-weight:700;
+    transition:.3s;
+}
+
+.menu-center a.active,
+.menu-center a:hover{
+    color:#df4e0b;
+}
+
+
+/* ================= MENU CATEGORIAS ================= */
+
+.dropdown{
+    position:relative;
+    padding-bottom:10px;
+}
+
+.contos{
+    display:none;
+    position:absolute;
+    top:35px;
+    left:0;
+
+    background:#222;
+    border-radius:8px;
+    min-width:160px;
+    padding:10px;
+}
+
+.contos a{
+    display:block;
+    padding:10px;
+    font-size:16px;
+    color:#fff;
+    text-decoration:none;
+}
+
+.contos a:hover{
+    background:#444;
+    border-radius:5px;
+}
+
+.dropdown:hover .contos{
+    display:block;
+}
